@@ -58,3 +58,42 @@ if __name__ == "__main__":
         print(f"Shortest path: {' -> '.join(path)} with total cost: {cost}")
     else:
         print("No path found.")
+
+
+
+
+
+
+
+
+
+
+# import heapq
+# def uniform_cost_search(graph, start, goal):
+#     frontier = [(0, start, [start])]
+#     explored = set()
+#     while frontier:
+#         cost, node, path = heapq.heappop(frontier)
+#         if node == goal:
+#             return path, cost
+#         if node in explored:
+#             continue
+#         explored.add(node)
+#         for neighbor, weight in graph[node]:
+#             if neighbor not in explored:
+#                 heapq.heappush(frontier, (cost + weight, neighbor, path + [neighbor]))
+#     return None, float('inf')
+# def get_user_input():
+#     graph = {}
+#     for _ in range(int(input("Enter the number of nodes: "))):
+#         node = input("Enter node name: ")
+#         graph[node] = []
+#         while (entry := input(f"Enter neighbor and cost for {node} (or 'done'): ")) != 'done':
+#             neighbor, cost = entry.split()
+#             graph[node].append((neighbor, int(cost)))
+#     return graph
+# if __name__ == "__main__":
+#     graph = get_user_input()
+#     start, goal = input("Enter the start node: "), input("Enter the goal node: ")
+#     path, cost = uniform_cost_search(graph, start, goal)
+#     print(f"Shortest path: {' -> '.join(path)} with total cost: {cost}" if path else "No path found.")
